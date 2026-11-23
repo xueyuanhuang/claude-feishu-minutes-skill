@@ -169,11 +169,11 @@ lark-cli docs +update \
 ### 示例 1：基础提取落到任务目录
 
 **用户输入**：
-> 根据 https://rockflow.feishu.cn/minutes/obcnvzj3s4l7dd4t7f2vqf8i 整理反馈
+> 根据 https://your-company.feishu.cn/minutes/obcnxxxxxxxxxxxxxxxxxxxx 整理反馈
 
 **执行**：
-1. 提取 minute_token = `obcnvzj3s4l7dd4t7f2vqf8i`
-2. `lark-cli vc +notes --minute-tokens obcnvzj3s4l7dd4t7f2vqf8i --as user`
+1. 提取 minute_token = `obcnxxxxxxxxxxxxxxxxxxxx`
+2. `lark-cli vc +notes --minute-tokens obcnxxxxxxxxxxxxxxxxxxxx --as user`
 3. 拿到 artifacts（summary + chapters + todos）
 4. 识别当前任务为 `T20260324-001_龙虾交易大赛增长/`
 5. 生成 `notes/2026-04-07_rf小龙虾欢乐群复盘.md`
@@ -182,20 +182,20 @@ lark-cli docs +update \
 ### 示例 2：提取后追加到目标文档
 
 **用户输入**：
-> https://rockflow.feishu.cn/minutes/obcnvzj3s4l7dd4t7f2vqf8i 把这个反馈补充到 https://rockflow.feishu.cn/docx/XXzddR0nioG1VNxOOaycx1kUnGd 这个文档里
+> https://your-company.feishu.cn/minutes/obcnxxxxxxxxxxxxxxxxxxxx 把这个反馈补充到 https://your-company.feishu.cn/docx/xxxxxxxxxxxxxxxxxxxxxxxxxxx 这个文档里
 
 **执行**：
 1. 提取两个 URL
 2. `vc +notes` 拉取妙记内容
 3. 组装为"反馈收集结果"章节（带日期标题）
-4. `docs +update --doc XXzddR0nioG1VNxOOaycx1kUnGd --mode append --markdown {...}`
+4. `docs +update --doc xxxxxxxxxxxxxxxxxxxxxxxxxxx --mode append --markdown {...}`
 5. 同时存一份到当前任务 `notes/`
 6. 输出 TL;DR + 两个链接
 
 ### 示例 3：首次使用，scope 未授权
 
 **用户输入**：
-> /feishu-minutes https://rockflow.feishu.cn/minutes/obcn...
+> /feishu-minutes https://your-company.feishu.cn/minutes/obcn...
 
 **执行**：
 1. 尝试 `vc +notes` → 报 missing scope
